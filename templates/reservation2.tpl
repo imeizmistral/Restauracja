@@ -7,18 +7,16 @@
         <div class="row">
             <div class="mb-3 col-4">
                 <label for="date" class="form-label">Data</label>
-                <input type="date" name="date" class="form-control" value={$date} min={date("Y-m-d")} max={date('Y-m-d', strtotime("+13 day"))} id="date" required disabled>   
+                <input type="date" name="date" class="form-control" value={$date} min={date("Y-m-d")} max={date('Y-m-d', strtotime("+13 day"))} id="date" required readonly="readonly">   
             </div>
             <div class="mb-3 col-3">
                 <label for="time" class="form-label">Godzina</label>
-                <input type="time" name="time" class="form-control" id="time" value={$time} min="14:00" max="22:00" required disabled>   
+                <input type="time" name="time" class="form-control" id="time" value={$time} min="14:00" max="22:00" required readonly="readonly">   
             </div>
             <div class="mt-4 pt-2 col-3">
                    <button type="submit" name="action" value="back" class="btn btn-primary w-100" href="index.php?action=back">Zmień</button>
             </div>
         </div>
-
-
          <div class="row mb-4 p-2">
          <label for="tables" class="form-label">Wybierz stolik:</label>
             <select class="form-select" aria-label="Default select example" id="tables" name="tables">

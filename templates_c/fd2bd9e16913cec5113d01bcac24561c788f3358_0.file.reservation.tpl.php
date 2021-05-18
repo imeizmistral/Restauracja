@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-14 22:03:42
+/* Smarty version 3.1.39, created on 2021-05-18 11:58:11
   from 'C:\xampp\htdocs\restauracja\templates\reservation.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_609ed79e8342d5_62186797',
+  'unifunc' => 'content_60a38fb32454a3_54949666',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd2bd9e16913cec5113d01bcac24561c788f3358' => 
     array (
       0 => 'C:\\xampp\\htdocs\\restauracja\\templates\\reservation.tpl',
-      1 => 1621022620,
+      1 => 1621331814,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:foot.tpl' => 1,
   ),
 ),false)) {
-function content_609ed79e8342d5_62186797 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60a38fb32454a3_54949666 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -48,12 +48,6 @@ $_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smar
         </div>
     
     </form>
-      <?php if ((isset($_smarty_tpl->tpl_vars['error']->value))) {?>
-                <div class="alert alert-danger" role="alert">
-                    <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
-
-                </div>
-                <?php }?>
 
 </div>
 

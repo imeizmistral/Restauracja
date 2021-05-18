@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-14 13:31:58
+/* Smarty version 3.1.39, created on 2021-05-18 09:57:55
   from 'C:\xampp\htdocs\restauracja\templates\head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_609e5fae6905b4_28602138',
+  'unifunc' => 'content_60a3738380df23_02397969',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a4cac332f3e7793073af69b8e428356687063b4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\restauracja\\templates\\head.tpl',
-      1 => 1620991049,
+      1 => 1621324673,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_609e5fae6905b4_28602138 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60a3738380df23_02397969 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -44,7 +44,7 @@ function content_609e5fae6905b4_28602138 (Smarty_Internal_Template $_smarty_tpl)
     <a class="nav-link" href="index.php?action=reservation">Rezerwacja</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <a class="nav-link" href="#" tabindex="-1">Zaloguj</a>
   </li>
 </ul><?php }
 }
