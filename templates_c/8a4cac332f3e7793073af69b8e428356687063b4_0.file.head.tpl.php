@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-19 14:34:36
+/* Smarty version 3.1.39, created on 2021-05-19 18:03:32
   from 'C:\xampp\htdocs\restauracja\templates\head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60a505dc44d538_92409962',
+  'unifunc' => 'content_60a536d444ac44_07029823',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a4cac332f3e7793073af69b8e428356687063b4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\restauracja\\templates\\head.tpl',
-      1 => 1621427674,
+      1 => 1621440210,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60a505dc44d538_92409962 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60a536d444ac44_07029823 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -43,14 +43,24 @@ function content_60a505dc44d538_92409962 (Smarty_Internal_Template $_smarty_tpl)
   <li class="nav-item">
     <a class="nav-link" href="index.php?action=reservation">Rezerwacja</a>
   </li>
+  
   <?php if ((isset($_smarty_tpl->tpl_vars['user']->value))) {?>
+  <li class="nav-item">
+    <a class="nav-link" href="index.php?action=tableReservation">Przegląd Rezerwacji</a>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="index.php?action=logout" tabindex="-1">Wyloguj</a>
   </li>
+   <li class="nav-item">
+    Witaj <?php echo $_smarty_tpl->tpl_vars['user']->value;?>
+
+    </li>
    <?php } else { ?>
+   
    <li class="nav-item">
     <a class="nav-link" href="index.php?action=login" tabindex="-1">Zaloguj</a>
   </li>
+   
      <?php }?>
 </ul><?php }
 }

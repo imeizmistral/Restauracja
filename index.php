@@ -10,9 +10,9 @@ $smarty->setCompileDir('./templates_c');
 $smarty->setCacheDir('./cache');
 $smarty->setConfigDir('./configs');
 
-if(isset($_SESSION['user']))
+if(isset($_SESSION['user'])) {
     $smarty->assign('user', $_SESSION['user']);
-
+}
 if(isset($_REQUEST['action'])) {
     switch($_REQUEST['action']) {
         case 'login':
@@ -22,9 +22,9 @@ if(isset($_REQUEST['action'])) {
         $login = 'asd';
         $password = 'zxc';
         if ($login == $_REQUEST['login'] && $password == $_REQUEST['password']) {
-        
-        $_SESSION['user'] = $_REQUEST['login'];
-        $smarty->display('panel.tpl');
+            $_SESSION['user'] = $_REQUEST['login'];
+            $smarty->assign('user', $_SESSION['user']);
+        $smarty->display('index.tpl');
         }
         else
         {
@@ -34,7 +34,7 @@ if(isset($_REQUEST['action'])) {
         break;
         case 'logout':
             session_destroy();
-            $smarty->display('index.tpl');
+            header('Location:index.php');
         break;
         case 'reservation':
             $smarty->display('reservation.tpl');
@@ -76,6 +76,23 @@ if(isset($_REQUEST['action'])) {
         break;
         case 'back':
             $smarty->display('reservation.tpl');
+        break;
+        case 'tableReservation':
+            $query = $db->prepare("SELECT * FROM reservation WHERE date = CURDATE() ORDER BY time");
+            $query->execute();
+            $result = $query->get_result();
+            $reservation = array();
+            while($row = $result->fetch_assoc()) {
+                array_push($reservation, $row);
+            }
+            $smarty->assign('reservation', $reservation);
+            $smarty->display('panel.tpl');
+        break;
+        case 'cancelReservation':
+        $query = $db->prepare("DELETE FROM reservation WHERE id= ?");
+        $query->bind_param("i", $_REQUEST['id']);
+        $query->execute();
+        header('Location: index.php');
         break;
         default:
         $smarty->display('index.tpl');
