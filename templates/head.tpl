@@ -20,7 +20,13 @@
   <li class="nav-item">
     <a class="nav-link" href="index.php?action=reservation">Rezerwacja</a>
   </li>
+  {if isset($user)}
   <li class="nav-item">
-    <a class="nav-link" href="#" tabindex="-1">Zaloguj</a>
+    <a class="nav-link" href="index.php?action=logout" tabindex="-1">Wyloguj</a>
   </li>
+   {else}
+   <li class="nav-item">
+    <a class="nav-link" href="index.php?action=login" tabindex="-1">Zaloguj</a>
+  </li>
+     {/if}
 </ul>

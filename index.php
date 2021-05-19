@@ -10,13 +10,34 @@ $smarty->setCompileDir('./templates_c');
 $smarty->setCacheDir('./cache');
 $smarty->setConfigDir('./configs');
 
+if(isset($_SESSION['user']))
+    $smarty->assign('user', $_SESSION['user']);
 
 if(isset($_REQUEST['action'])) {
     switch($_REQUEST['action']) {
+        case 'login':
+            $smarty->display('login.tpl');
+        break;
+        case 'processLogin':
+        $login = 'asd';
+        $password = 'zxc';
+        if ($login == $_REQUEST['login'] && $password == $_REQUEST['password']) {
+        
+        $_SESSION['user'] = $_REQUEST['login'];
+        $smarty->display('panel.tpl');
+        }
+        else
+        {
+        $smarty->assign('error', "Błędny login lub hasło"); 
+        $smarty->display('login.tpl');
+        }
+        break;
+        case 'logout':
+            session_destroy();
+            $smarty->display('index.tpl');
+        break;
         case 'reservation':
-            
             $smarty->display('reservation.tpl');
-            
         break;
         case 'processReservation':
             $date =$_REQUEST['date'];
