@@ -1,8 +1,8 @@
 {include file="head.tpl"}
 
-    <div class="row">
-        <div class="col col-lg-4 offset-lg-4 mt-5">
-            <h2 class="text-center">Panel Restauratora</h2>
+
+        <div class="box">
+            <h2>Panel Restauratora</h2>
             <form action="index.php" method="post">
                 <input type="hidden" name="action" value="processLogin">
                 <div class="mb-3">
@@ -23,5 +23,5 @@
                 {/if}
             </form>
         </div>
-    </div>
+
 {include file="foot.tpl"}

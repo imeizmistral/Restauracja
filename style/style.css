@@ -1,0 +1,115 @@
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("grafika/tlo.jpg");
+    background-repeat: no-repeat;
+}
+.container
+{
+    height: 60rem;
+    width:70%;
+    margin: auto;
+    border-radius: 1rem;
+}
+.main
+{
+    height: 60rem;
+    border-radius: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    
+  }
+  
+  li {
+    float: left;
+    width: 10rem;
+    border-radius: 1rem;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size:16px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: rgba(252, 195, 9, 0.849);
+  }
+
+  .header-logo
+  {
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, red 0%, black 30%,black 70%, green 100%);
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+  }
+  .logo
+  {
+    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+  }
+  .content
+  {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+  .img
+  {
+    
+    width: 32%;
+    height: auto;
+    float:left;
+    margin-left: 4px;
+    border:solid 2px white;
+    border-radius: 1rem;
+  }
+  .box
+  {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    height: 15rem;
+    background: rgba(0, 0, 0, 0.4);
+    padding:15px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 1rem;
+  }
+  .box-row
+  {
+      margin-bottom:10px;
+      height: 2rem;
+  }
+  .box-row-bottom
+  {
+      padding-left: 10px;
+      float:left;
+  }
+  .btn
+  {
+    margin-left: 40%;
+    margin-right: auto;
+  }
