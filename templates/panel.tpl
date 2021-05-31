@@ -1,13 +1,13 @@
 {include file="head.tpl"}
     
-        <main class="row">
+        <main class="box">
             {if isset($user)}
-                    <div class="col">
+                 
                         
                    
 
 <h2> Dzisiejsze rezerwacje</h2>
-                    <table class="table">
+                    <table class="table2">
   <thead>
     <tr>
       <th scope="col">id</th>
@@ -26,15 +26,14 @@
             <td>{$reserved.id_table}</td>
             <td>
                 <a href="index.php?action=cancelReservation&id={$reserved.id}">
-                <button class="btn btn-primary">Odwołaj rezerwację</button>
+                <button class="button">Odwołaj rezerwację</button>
             </a>
             </td>
         </tr>
         {/foreach}
   </tbody>
 </table>
-                
-           </div>      
+                    
                 
                 
                 

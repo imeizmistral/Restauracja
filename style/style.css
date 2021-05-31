@@ -1,8 +1,20 @@
+@keyframes Logo {
+  50% {
+    opacity: 0;
+    }
+  100% {
+    opacity: 1;
+   } }
+
+
 body
 {
     font-family: 'Open Sans', sans-serif;
     background-image: url("grafika/tlo.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 140vh;
 }
 .container
 {
@@ -69,6 +81,9 @@ ul {
     margin-left: auto;
     margin-right: auto;
     width: 20%;
+    animation-name: Logo;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
   }
   .content
   {
@@ -85,31 +100,68 @@ ul {
     margin-left: 4px;
     border:solid 2px white;
     border-radius: 1rem;
+    transform: scale(0.7);
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    box-shadow: 0 1.5rem 4rem rgb(17 17 17 / 50%);
+    transition: all 0.5s;
   }
+  .img:hover {
+    transform: translateY(10px) scale(1.0);
+    z-index: 12;
+    outline-offset: 2rem; }
   .box
   {
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
-    height: 15rem;
+    height: fit-content;
     background: rgba(0, 0, 0, 0.4);
     padding:15px;
     font-size: 24px;
     text-align: center;
     border-radius: 1rem;
+    color: aliceblue;
   }
   .box-row
   {
       margin-bottom:10px;
       height: 2rem;
+      color: aliceblue;
   }
   .box-row-bottom
   {
       padding-left: 10px;
       float:left;
+      color: aliceblue;
   }
   .btn
   {
-    margin-left: 40%;
+    margin-left: auto;
     margin-right: auto;
   }
+
+.info
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  color: aliceblue;
+}
+.info-info
+{
+  float:left;
+  width: fit-content;
+  margin-left: 1.5rem;
+}
+table, th, td {
+  border: 1px solid black;
+}
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}

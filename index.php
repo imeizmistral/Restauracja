@@ -42,6 +42,7 @@ if(isset($_REQUEST['action'])) {
         case 'processReservation':
             $date =$_REQUEST['date'];
             $time =$_REQUEST['time'];
+            // zapytanie które tworzy dostępne rezerwacje na 14 dni do przodu z wyłączeniem już dokonanych rezerwacji
             $query = $db->prepare("
             WITH recursive Date_Ranges AS(
             SELECT CURDATE() as Date
@@ -72,7 +73,18 @@ if(isset($_REQUEST['action'])) {
                                     VALUES (NULL,?,?,?,?,?)");
             $query->bind_param("issii",$_REQUEST['tel'],$_REQUEST['date'], $_REQUEST['time'],$_REQUEST['tables'],$six_digit_random);
             $query->execute();
-         header('Location:index.php');
+         header('Location:index.php?action=info');
+        break;
+        case 'info':
+            $query = $db->prepare("SELECT * FROM reservation ORDER BY ID DESC LIMIT 1");
+            $query->execute();
+            $result = $query->get_result();
+            $row = $result->fetch_assoc();
+            $smarty->assign('row', $row);
+
+            $accept=TRUE;
+            $smarty->assign('accept', $accept);
+            $smarty->display('index.tpl');
         break;
         case 'back':
             $smarty->display('reservation.tpl');
@@ -92,7 +104,7 @@ if(isset($_REQUEST['action'])) {
         $query = $db->prepare("DELETE FROM reservation WHERE id= ?");
         $query->bind_param("i", $_REQUEST['id']);
         $query->execute();
-        header('Location: index.php');
+        header('Location: index.php?action=tableReservation');
         break;
         default:
         $smarty->display('index.tpl');

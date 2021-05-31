@@ -18,7 +18,7 @@
         
         
             <div class="box-row-bottom">
-                 <button type="submit" name="action" value="back" href="index.php?action=back">Zmień</button>
+                 <button class="button" type="submit" name="action" value="back" href="index.php?action=back">Zmień</button>
             </div>
         </div>
           <div class="box-row">
@@ -38,7 +38,7 @@
         </div>
         </div>
         <div class="box-row">
-            <button type="submit" class="btn">Zarezerwuj</button>
+            <button  class="button" type="submit" class="btn">Zarezerwuj</button>
     </form>
 </div>
 

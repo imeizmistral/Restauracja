@@ -18,7 +18,7 @@
         
         
             <div class="box-row-bottom">
-                <button type="submit" href='index.php?accept'>Sprawdź</button>
+                <button class="button" type="submit" href='index.php?accept'>Sprawdź</button>
             </div>
         </div>
     </form>

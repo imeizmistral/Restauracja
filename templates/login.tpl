@@ -7,11 +7,11 @@
                 <input type="hidden" name="action" value="processLogin">
                 <div class="mb-3">
                     <label for="login" class="form-label">Login</label>
-                    <input type="text" name="login" class="form-control" id="login" required>   
+                    <input type="text" name="login" class="form-control" id="login" required placeholder="asd">   
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Hasło</label>
-                    <input type="password" name="password" class="form-control" id="password" required>   
+                    <input type="password" name="password" class="form-control" id="password" required placeholder="zxc">   
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary w-100">Zaloguj</button>
